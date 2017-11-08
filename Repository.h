@@ -1,242 +1,69 @@
 #ifndef REPOSITORY_H
 #define REPOSITORY_H
 
-#include "Initialize.h"
-#include "VerticalWinner.h"
-#include "HorizontalWinner.h"
-#include "DiagonalWinner.h"
-#include "Winner.h"
-#include "HasMove.h"
-#include "MakeMove.h"
-#include "Board.h"
+#include "Mean.h"
+#include "Variance.h"
+#include "Zscores.h"
+#include "Stats.h"
 
-bool InitializeTest()
+bool MeanTest()
 {
-	initialize();
-	bool result = (a == '-');
-	result = result && (b == '-');
-	result = result && (c == '-');
-	result = result && (d == '-');
-	result = result && (e == '-');
-	result = result && (f == '-');
-	result = result && (g == '-');
-	result = result && (h == '-');
-	result = result && (i == '-');
-	
-	return result;
+	double nums[] = { 1,2,3,4,5 };
+	return (mean(nums[0], nums[1], nums[2], nums[3], nums[4]) == 3.0);
 }
 
-bool VerticalWinnerTest()
+bool VarianceTest()
 {
-	bool result;
-	
-	a = 'X'; b = 'X'; c = '-';
-	d = 'O'; e = 'O'; f = 'X';
-	g = '-'; h = 'X'; i = '-';
-	
-	result = verticalWinner();
-
-	a = 'X'; b = 'X'; c = 'X';
-	d = 'O'; e = 'O'; f = 'X';
-	g = '-'; h = 'X'; i = 'X';
-	
-	result = (!result) && verticalWinner();
-
-	a = 'X'; b = 'X'; c = '-';
-	d = 'O'; e = 'X'; f = 'O';
-	g = '-'; h = 'X'; i = '-';
-	
-	result = result && verticalWinner();
-	
-	a = 'X'; b = 'X'; c = '-';
-	d = 'X'; e = 'O'; f = 'X';
-	g = 'X'; h = 'X'; i = 'X';
-	
-	result = result && verticalWinner();
-
-	return result;
+	double nums[] = { 1,2,3,4,5 };
+	return (variance(nums[0], nums[1], nums[2], nums[3], nums[4]) == 2.0);
 }
 
-bool HorizontalWinnerTest()
+bool ZscoreTest()
 {
-	bool result;
-	
-	a = 'X'; b = 'X'; c = '-';
-	d = 'O'; e = 'O'; f = 'X';
-	g = '-'; h = 'X'; i = '-';
-	
-	result = horizontalWinner();
+	double nums[] = { 1,2,3,4,5 };
+	double znum[5];
 
-	a = 'X'; b = 'X'; c = 'X';
-	d = 'O'; e = 'O'; f = 'X';
-	g = '-'; h = 'X'; i = '-';
-	
-	result = (!result) && horizontalWinner();
+	for (int i = 0; i < 5; i += 1)
+	{
+		znum[i] = (nums[i] - 3.0) / sqrt(2.0);
+	}
 
-	a = 'X'; b = 'X'; c = '-';
-	d = 'O'; e = 'O'; f = 'O';
-	g = '-'; h = 'X'; i = '-';
-	
-	result = result && horizontalWinner();
-	
-	a = 'X'; b = 'X'; c = '-';
-	d = 'O'; e = 'O'; f = 'X';
-	g = 'X'; h = 'X'; i = 'X';
-	
-	result = result && horizontalWinner();
+	zscores(nums[0], nums[1], nums[2], nums[3], nums[4]);
 
-	return result;
+	for (int i = 0; i < 5; i += 1)
+	{
+		if (znum[i] != nums[i])
+		{
+			return false;
+		}
+	}
+
+	return true;
 }
 
-bool DiagonalWinnerTest()
+bool StatsTest()
 {
-	bool result;
+	double nums[] = { 1,2,3,4,5 };
+	std::string result, solution ="";
 	
-	a = 'X'; b = 'X'; c = '-';
-	d = 'O'; e = 'O'; f = 'X';
-	g = '-'; h = 'X'; i = '-';
-	
-	result = diagonalWinner();
+	solution += "For values\n";
+	solution += "[1.00,2.00,3.00,4.00,5.00]\n";
+	solution += "Mean\n";
+	solution += "3.00\n";
+	solution += "Standard Deviation\n";
+	solution += "1.41\n";
+	solution += "Z-scores\n";
+	solution += "[-1.41,-0.71,0.00,0.71,1.41]";
 
-	a = 'X'; b = 'X'; c = '-';
-	d = 'O'; e = 'X'; f = '-';
-	g = '-'; h = 'X'; i = 'X';
-	
-	result = (!result) && diagonalWinner();
-
-	a = 'X'; b = 'X'; c = 'O';
-	d = 'O'; e = 'O'; f = 'O';
-	g = 'O'; h = 'X'; i = '-';
-	
-	result = result && diagonalWinner();
-
-	return result;
-}
-
-bool WinnerTest()
-{
-	bool result;
-	
-	a = 'X'; b = 'X'; c = '-';
-	d = 'O'; e = 'O'; f = 'X';
-	g = '-'; h = 'X'; i = '-';
-	
-	result = winner();
-
-	a = 'X'; b = 'X'; c = 'X';
-	d = 'O'; e = 'O'; f = 'X';
-	g = '-'; h = 'X'; i = 'X';
-	
-	result = (!result) && winner();
-
-	a = 'X'; b = 'X'; c = '-';
-	d = 'O'; e = 'X'; f = 'O';
-	g = '-'; h = 'X'; i = '-';
-	
-	result = result && winner();
-	
-	a = 'X'; b = 'X'; c = '-';
-	d = 'X'; e = 'O'; f = 'X';
-	g = 'X'; h = 'X'; i = 'X';
-	
-	result = result && winner();
-
-	a = 'X'; b = 'X'; c = 'X';
-	d = 'O'; e = 'O'; f = 'X';
-	g = '-'; h = 'X'; i = '-';
-	
-	result = result && winner();
-
-	a = 'X'; b = 'X'; c = '-';
-	d = 'O'; e = 'O'; f = 'O';
-	g = '-'; h = 'X'; i = '-';
-	
-	result = result && winner();
-	
-	a = 'X'; b = 'X'; c = '-';
-	d = 'O'; e = 'O'; f = 'X';
-	g = 'X'; h = 'X'; i = 'X';
-	
-	result = result && winner();
-
-	a = 'X'; b = 'X'; c = '-';
-	d = 'O'; e = 'X'; f = '-';
-	g = '-'; h = 'X'; i = 'X';
-	
-	result = result && winner();
-
-	a = 'X'; b = 'X'; c = 'O';
-	d = 'O'; e = 'O'; f = 'O';
-	g = 'O'; h = 'X'; i = '-';
-	
-	result = result && winner();
-
-	return result;
-}
-
-bool HasMoveTest()
-{
-	bool result;
-	
-	a = 'X'; b = 'X'; c = '-';
-	d = 'O'; e = 'O'; f = 'X';
-	g = '-'; h = 'X'; i = '-';
-	
-	result = hasMove();
-
-	a = 'X'; b = 'X'; c = 'X';
-	d = 'O'; e = 'O'; f = 'X';
-	g = 'X'; h = 'X'; i = 'X';
-	
-	result = result && !hasMove();
-
-	return result;
-}
-
-bool MakeMoveTest()
-{
-	bool result;
-	
-	a = 'X'; b = 'X'; c = '-';
-	d = 'O'; e = 'O'; f = 'X';
-	g = '-'; h = 'X'; i = '-';
-	
-	result = makeMove(2,'O');	
-	result = (!result) && makeMove(7,'O');
-
-	return result;
-}
-
-bool BoardTest()
-{
-	bool result;
-	std::string bd;
-	
-	a = 'X'; b = 'X'; c = '-';
-	d = 'O'; e = 'O'; f = 'X';
-	g = '-'; h = 'X'; i = '-';
-	
-	bd = "\nX X -\nO O X\n- X -\n";	
-	result = (bd == board());	
-
-	a = 'X'; b = '-'; c = '-';
-	d = 'X'; e = 'O'; f = 'X';
-	g = '-'; h = 'O'; i = 'O';
-	
-	bd = "\nX - -\nX O X\n- O O\n";	
-	result = result && (bd == board());	
-
-	return result;
+	result = stats(nums[0], nums[1], nums[2], nums[3], nums[4]);
+	return (result == solution);
 }
 
 bool Tester()
 {
-	bool(*func[8])() = { &InitializeTest,&VerticalWinnerTest,&HorizontalWinnerTest,&DiagonalWinnerTest,
-		&WinnerTest,&HasMoveTest,&MakeMoveTest,&BoardTest}, result = true;
-		
-	std::string functions[8] = { "Initialize","VerticalWinner","HorizontalWinner","DiagonalWinner",
-		"Winner", "HasMove", "MakeMove", "Board"};
-	for (int i = 0; i < 8; i += 1)
+	bool(*func[4])() = { &MeanTest,&VarianceTest,&ZscoreTest,StatsTest }, result = true;
+	std::string functions[4] = { "Mean","Variance","Zscores","Stats" };
+	for (int i = 0; i < 4; i += 1)
 	{
 		std::cout << functions[i] << " Test ";
 		std::cout << ((func[i]()) ? ("has passed.\n") : ("has failed.\n"));
@@ -249,56 +76,5 @@ bool Tester()
 	std::cout << "\n";
 	return result;
 }
-
-void initArray(int arr[])
-{
-	for(int i = 0;i < 9;i += 1)
-	{
-		arr[i] = i + 1;
-	}
-}
-
-int findChoice(int arr[],int size,int choice)
-{
-	for(int i = 0;i < size;i += 1)
-	{
-		if(arr[i] == choice)
-			return i;
-	}
-	
-	return -1;
-}
-
-bool removeChoice(int arr[],int size,int choice)
-{
-	int index = findChoice(arr,size,choice);
-	
-	if(index == -1)
-	{
-		return false;
-	}
-	else
-	{
-		for(int i = index;i < size - 1;i += 1)
-		{
-			arr[i] = arr[i+1];
-		}
-		return true;
-	}
-}
-
-int randomChoice(int arr[],int size)
-{
-	if(size == 0)
-	{
-		return 0;
-	}
-	else
-	{
-		int index = rand() % size;
-		return arr[index];
-	}
-}
-
 
 #endif 

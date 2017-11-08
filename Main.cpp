@@ -1,71 +1,36 @@
-//Lab 2 : Tic Tac Toe
-//Team: <Creators>
-//Members: <Michael Olorode>
-//Creation: <11/1/17>
+//Lab 1 : Statistic
+//Team: <Team Name>
+//Members: <Names>
+//Creation: <Date>
 #include "Repository.h"
 #include <fstream>
 using namespace std;
 
-void PlayGame()
+int main()
 {
-	const char tokens[2] = {'O','X'};
-	int player = 0;
-	int values = 9;
-	int position;
-	int choices[9];
-	
-	initArray(choices);
-	initialize();
-	
-	cout << "Player 1 (O) => User\nPlayer 2 (X) => Computer\n";
-	cout << "Board Positions\n";
-	cout << "1 2 3\n4 5 6\n7 8 9\n\n";
-	
-	while(hasMove() && !winner())
+	double x[5];
+
+	if (Tester())
 	{
-		cout << "Player " << (player + 1);
-		cout << "\n" << board() << "\n";
-		
-		if(player == 0)
+		string values[5] = { "first","second","third","fourth","fifth" };
+		for (int i = 0; i < 5; i += 1)
 		{
-			cout << "Select position: ";
-			cin >> position;
-			
-			while(!makeMove(position,tokens[0]))
-			{
-				cout << "The position is unavailable\nSelect another position: ";
-				cin >> position;
-			}		
+			cout << "Enter the " << values[i] << " value: ";
+			cin >> x[i];
 		}
-		else 
-		{
-			position = randomChoice(choices,values);
-			makeMove(position,tokens[1]);
-		}
-		
-		removeChoice(choices,values,position);
-		values -= 1;
-		player = (player + 1) % 2;
-	}
-	
-	if(winner())
-	{
-		cout << "\n" << board() << "\n";
-		cout << "Player " << ((player + 1) % 2 + 1) << " won!\n";
 	}
 	else
 	{
-		cout << "Game ended in a draw.\n";
+		for (int i = 0; i < 5; i += 1)
+		{
+			x[i] = (i + 1.0);
+		}
 	}
-}
-
-int main()
-{
-	if(Tester())
-	{
-		srand(time(NULL));
-		PlayGame();
-	}
-	
+	string str = stats(x[0], x[1], x[2], x[3], x[4]);
+	fstream out;
+	out.open("record.txt", fstream::out);
+	out << str << "\n";
+	out.close();
+	cout << "Record has been generated.\n";
 	return 0;
 }
