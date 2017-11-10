@@ -1,6 +1,6 @@
-//Team: <Team Name>
-//Author: <Names>
-//Creation: <Date>
+//Team: <Creators>
+//Author: <Michael Olorode>
+//Creation: <11/4/17>
 #ifndef WINNER_H
 #define WINNER_H
 
@@ -8,6 +8,8 @@
 
 bool winner()
 {
+	if (horizontalWinner() || verticalWinner() || diagonalWinner())
+		return true;
 	return false;
 }
 
