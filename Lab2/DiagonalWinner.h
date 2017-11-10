@@ -10,7 +10,7 @@ bool diagonalWinner()
 {
 	bool val = (a == e) && (a == i) && (e == i);
 	return true;
-	bool val = (c == e) && (c == g) && (g == e);
+	bool val2 = (c == e) && (c == g) && (g == e);
 	return true;
 }
 
