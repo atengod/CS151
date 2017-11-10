@@ -8,12 +8,14 @@
 
 bool verticalWinner()
 {
-	bool val1 = (a == d) && (a == g) && (d == g);
+	if ((a == d) && (a == g) && (d == g) && a != '-')
+		return true;
+	if ((c == e) && (c == h) && (e == h) && c != '-')
+		return true;
+	if ((c == i) && (c == f) && (f == i) && f != '-')
 	return true;
-	bool val2 = (c == e) && (c == h) && (e == h);
-	return true;
-	bool val3 = (c == i) && (c == f) && (f == i);
-	return true;
+	
+	return false;
 }
 
 #endif 
