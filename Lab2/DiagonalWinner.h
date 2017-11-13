@@ -8,9 +8,9 @@
 
 bool diagonalWinner()
 {
-	if ((a == e) && (a == i) && (e == i) & (a != '-') & (e != '-') & (i != '-'))
+	if ((a == e) && (a == i) && (e == i) & (a != '-') && (e != '-') && (i != '-'))
 		return true;
-	if ((c == e) && (c == g) && (g == e) & (c != '-') & (g != '-') & (e != '-'))
+	if ((c == e) && (c == g) && (g == e) & (c != '-') && (g != '-') && (e != '-'))
 		return true;
 	
 	else
