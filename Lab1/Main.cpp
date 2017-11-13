@@ -1,7 +1,7 @@
 //Lab 1 : Statistic
-//Team: <Team Name>
-//Members: <Names>
-//Creation: <Date>
+//Team: <Creators>
+//Members: <Michael Olorode>
+//Creation: <10/30/17>
 #include "Repository.h"
 #include <fstream>
 using namespace std;
