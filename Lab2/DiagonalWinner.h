@@ -8,10 +8,13 @@
 
 bool diagonalWinner()
 {
-	bool val = (a == e) && (a == i) && (e == i);
-	return true;
-	bool val2 = (c == e) && (c == g) && (g == e);
-	return true;
+	if ((a == e) && (a == i) && (e == i) & (a != '-') & (e != '-') & (i != '-'))
+		return true;
+	if ((c == e) && (c == g) && (g == e) & (c != '-') & (g != '-') & (e != '-'))
+		return true;
+	
+	else
+		return false;
 }
 
 #endif 
