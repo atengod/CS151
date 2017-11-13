@@ -8,14 +8,15 @@
 
 bool verticalWinner()
 {
-	if ((a == d) && (a == g) && (d == g) && a != '-')
+	if ((a == d) && (a == g) && (d == g) && (a != '-') && (d != '-') && (g != '-'))
 		return true;
-	if ((c == e) && (c == h) && (e == h) && c != '-')
+	if ((b == e) && (b == h) && (e == h) && (b != '-') && (e != '-') && (h != '-'))
 		return true;
-	if ((c == i) && (c == f) && (f == i) && f != '-')
-	return true;
+	if ((c == f) && (c == i) && (f == i) && (c != '-') && (f != '-') && (i != '-'))
+		return true;
 	
-	return false;
+	else
+		return false;
 }
 
 #endif 
