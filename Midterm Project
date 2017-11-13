@@ -22,7 +22,6 @@ double res = a - b;
 cout << "Subtraction of " << a << " and " << b << " is : " << res << endl;
 }
 
-
 void Multiplication(double a, double b)
 {
 double res = a * b;
@@ -34,7 +33,7 @@ void Division(double a, double b)
 if(b != 0)
 {
 double res = a / b;
-cout << "Division of " << a << " and " << b <<" is : "<< res << endl;
+cout << "Division of " << a << " and " << b << " is : "<< res << endl;
 }
 
 if(b==0)
