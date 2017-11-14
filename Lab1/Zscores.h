@@ -1,6 +1,6 @@
-//Team: <Team Name>
-//Author: <Names>
-//Creation: <Date>
+//Team: <Creators>
+//Author: <Michael Olorode>
+//Creation: <10/30/17>
 #ifndef ZSCORES_H
 #define ZSCORES_H
 

@@ -1,0 +1,97 @@
+/*********************
+//Name:Michael Olorode
+//Creation: 11/09/17
+//Version: Project 1
+*********************/
+
+
+#include<iostream>
+#include<iomanip>
+
+using namespace std;
+
+void Addition(double a, double b)
+{
+double res = a + b;
+cout << "Addition of " << a << " and " << b << " is : " << res << endl;
+}
+
+void Subtraction(double a, double b)
+{
+double res = a - b;
+cout << "Subtraction of " << a << " and " << b << " is : " << res << endl;
+}
+
+void Multiplication(double a, double b)
+{
+double res = a * b;
+cout << "Multiplication of " << a << " and " << b << " is : " << res << endl;
+}
+
+void Division(double a, double b)
+{
+if(b != 0)
+{
+double res = a / b;
+cout << "Division of " << a << " and " << b << " is : "<< res << endl;
+}
+
+if(b==0)
+{
+cout << "Sorry Can not divide by zero.." <<endl;
+}
+}
+
+int main()
+{
+
+cout << fixed << setprecision(3) << endl;
+double a, b;
+int choice;
+
+do
+{
+
+cout << "1. Addition" << endl;
+cout << "2. Subtraction" << endl;
+cout << "3. Multiplication" << endl;
+cout << "4. Division" << endl;
+cout << "5. Quit" << endl;
+cout << "Please select a choice: ";
+cin >> choice;
+
+switch(choice)
+{
+case 1:
+cout << "Enter two numbers: ";
+cin >> a >> b;
+
+Addition(a, b);
+break;
+case 2:
+cout << "Enter two numbers: ";
+cin >> a >> b;
+
+Subtraction(a, b);
+break;
+case 3:
+cout << "Enter two numbers: ";
+cin >> a >> b;
+
+Multiplication(a, b);
+break;
+case 4:
+cout << "Enter two numbers: ";
+cin >> a >> b;
+
+Division(a, b);
+break;
+case 5:
+cout << "Exiting the program..." << endl;
+cout << "Press any key to continue.." << endl;
+break;
+}
+}
+while(choice != 5);
+return 0;
+}

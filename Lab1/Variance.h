@@ -1,6 +1,6 @@
-//Team: <Team Name>
-//Author: <Names>
-//Creation: <Date>
+//Team: <Creators>
+//Author: <Michael Olorode>
+//Creation: <10/30/17>
 #ifndef VARIANCE_H
 #define VARIANCE_H
 
