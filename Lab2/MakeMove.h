@@ -1,6 +1,6 @@
-//Team: <Team Name>
-//Author: <Names>
-//Creation: <Date>
+//Team: <Creators>
+//Author: <Michael Olorode>
+//Creation: <11/30/17>
 #ifndef MAKEMOVE_H
 #define MAKEMOVE_H
 
