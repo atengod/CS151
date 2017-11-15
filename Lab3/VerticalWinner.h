@@ -8,15 +8,18 @@
 
 bool verticalWinner()
 {
-	if ((grid[c] == grid[e] && grid[c] == grid[g] && grid[g] == grid[e]) && (grid[c] != '-') && (grid[e] != '-') && (grid[g] != '-'))
+	if ((grid[0] == grid[3] && grid[0] == grid[6] && grid[3] == grid[6]) && (grid[0] != '-') && (grid[3] != '-') && (grid[6] != '-'))
 	{
 		return true;
 	}
-	else if ((grid[a] == grid[e] && grid[a] == grid[i] && grid[e] == grid[i]) && (grid[e] != '-') && (grid[a] != '-') && (grid[i] != '-'))
+	else if ((grid[4] == grid[1] && grid[4] == grid[7] && grid[1] == grid[7]) && (grid[4] != '-') && (grid[1] != '-') && (grid[7] != '-'))
 	{
 		return true;
 	}
-
+	else if ((grid[5] == grid[2] && grid[5] == grid[8] && grid[2] == grid[8]) && (grid[5] != '-') && (grid[2] != '-') && (grid[8] != '-'))
+	{
+		return true;
+	}
 	return false;
 }
 
