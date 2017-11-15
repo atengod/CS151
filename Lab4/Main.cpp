@@ -1,7 +1,6 @@
-//Lab 2 : Tic Tac Toe
-//Team: <Team Name>
-//Members: <Names>
-//Creation: <Date>
+//Team: <Creators>
+//Members: <Michael Olorode>
+//Creation: <11/15/17>
 #include "Repository.h"
 #include <fstream>
 using namespace std;
