@@ -1,6 +1,6 @@
-//Team: <Team Name>
-//Author: <Names>
-//Creation: <Date>
+//Team: <Creators>
+//Author: <Michael Olorode>
+//Creation: <11/9/17>
 #ifndef DIAGONALWINNER_H
 #define DIAGONALWINNER_H
 
