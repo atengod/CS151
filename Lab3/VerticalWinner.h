@@ -8,6 +8,15 @@
 
 bool verticalWinner()
 {
+	if ((grid[c] == grid[e] && grid[c] == grid[g] && grid[g] == grid[e]) && (grid[c] != '-') && (grid[e] != '-') && (grid[g] != '-'))
+	{
+		return true;
+	}
+	else if ((grid[a] == grid[e] && grid[a] == grid[i] && grid[e] == grid[i]) && (grid[e] != '-') && (grid[a] != '-') && (grid[i] != '-'))
+	{
+		return true;
+	}
+
 	return false;
 }
 
