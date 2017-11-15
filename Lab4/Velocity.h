@@ -1,6 +1,6 @@
-//Team: <Team Name>
-//Author: <Names>
-//Creation: <Date>
+//Team: <Creators>
+//Author: <Michael Olorode>
+//Creation: <11/15/17>
 #ifndef VELOCITY_H
 #define VELOCITY_H
 
