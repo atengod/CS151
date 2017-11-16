@@ -8,7 +8,21 @@
 
 bool makeMove(int position,char token)
 {	
-	return false;
+	if (position >= 1 && position <= 9)
+	{
+		if (grid[position-1] == '-')
+		{
+			grid[position - 1] = token;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	else
+	{
+		return false;
+	}
 }
 
 #endif 
