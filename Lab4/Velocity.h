@@ -8,8 +8,8 @@
 
 double velocity(double v,double t,double a)
 {	
-	double velocity = v + a * t
-		cout << final velocity;
+	double vy = v*sin(toRad(a)) + (-9.8*t);
+	return vy;
 }
 
 #endif 
