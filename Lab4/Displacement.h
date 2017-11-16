@@ -8,8 +8,8 @@
 
 double displacement(double v,double t,double a)
 {
-	double displacement = h + 1/2 (v + v)t
-		return 0.0;
+	double s = v*cos(toRad(a))*t;
+	return s;
 }
 
 #endif 
