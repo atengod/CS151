@@ -8,6 +8,8 @@
 
 bool winner()
 {
+	if (horizontalWinner() || verticalWinner() || diagonalWinner())
+		return true; 
 	return false;
 }
 
