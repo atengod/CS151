@@ -8,7 +8,7 @@
 
 double height(double v,double t,double a)
 {
-	return 0.0;
-}
+	double h = v * sin(toRad(a))*t + 0.5*G*t*t;
+	return h;}
 
 #endif 
