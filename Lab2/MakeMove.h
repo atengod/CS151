@@ -8,150 +8,56 @@
 
 bool makeMove(int position,char token)
 {
-	if (position>= 1 && position<=9)
+	
+	if (position == 1 && a == '-') 
 	{
-		if (position == 1)
-		{
-			if (a == '-')
-			{
-				a = token;
-				return true;
-			}
-			else
-			{
-				return false;
-			}
-		}
+		a = token;
+		return true;
 	}
-	return false;
-	if (position>= 1 && position<=9)
+	else if (position == 2 && b == '-') 
 	{
-		if (position == 1)
-		{
-			if (b == '-')
-			{
-				b = token;
-				return true;
-			}
-			else
-			{
-				return false;
-			}
-		}
+		b = token;
+		return true;
 	}
-	return false;
-	if (position>= 1 && position<=9)
+	else if (position == 3 && c == '-') 
 	{
-		if (position == 1)
-		{
-			if (c == '-')
-			{
-				c = token;
-				return true;
-			}
-			else
-			{
-				return false;
-			}
-		}
+		c = token;
+		return true;
 	}
-	return false;
-	if (position>= 1 && position<=9)
+	else if (position == 4 && d == '-') 
 	{
-		if (position == 1)
-		{
-			if (d == '-')
-			{
-				d = token;
-				return true;
-			}
-			else
-			{
-				return false;
-			}
-		}
+		d = token;
+		return true;
 	}
-	return false;
-	if (position>= 1 && position<=9)
+	else if (position == 5 && e == '-') 
 	{
-		if (position == 1)
-		{
-			if (e == '-')
-			{
-				e = token;
-				return true;
-			}
-			else
-			{
-				return false;
-			}
-		}
+		e = token;
+		return true;
 	}
-	return false;
-	if (position>= 1 && position<=9)
+	else if (position == 6 && f == '-') 
 	{
-		if (position == 1)
-		{
-			if (f == '-')
-			{
-				f = token;
-				return true;
-			}
-			else
-			{
-				return false;
-			}
-		}
+		f = token;
+		return true;
 	}
-	return false;
-	if (position>= 1 && position<=9)
+	else if (position == 7 && g == '-') 
 	{
-		if (position == 1)
-		{
-			if (g == '-')
-			{
-				g = token;
-				return true;
-			}
-			else
-			{
-				return false;
-			}
-		}
+		g = token;
+		return true;
 	}
-	return false;
-	if (position>= 1 && position<=9)
+	else if (position == 8 && h == '-') 
 	{
-		if (position == 1)
-		{
-			if (h == '-')
-			{
-				h = token;
-				return true;
-			}
-			else
-			{
-				return false;
-			}
-		}
+		h = token;
+		return true;
 	}
-	return false;
-	if (position>= 1 && position<=9)
+	else if (position == 9 && i == '-') 
 	{
-		if (position == 1)
-		{
-			if (i == '-')
-			{
-				i = token;
-				return true;
-			}
-			else
-			{
-				return false;
-			}
-		}
+		i = token;
+		return true;
 	}
-	return false;
+	else 
+	{
+		return false;
+	}
 }
 
 #endif 
