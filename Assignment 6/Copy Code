@@ -36,11 +36,11 @@ using namespace std;
 void copy(string filename);
 int main()
 {
-string filename;
-cout << "Enter filename : ";
-cin >> filename;
-copy(filename);
-return 0;
+    string filename;
+    cout << "Enter filename : ";
+    cin >> filename;
+    copy(filename);
+    return 0;
 }
 
 void copy(string filename)
