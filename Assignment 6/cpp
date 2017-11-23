@@ -15,7 +15,8 @@
 ********************************************/
 #include "copy.h"
 
-int main(){
+int main()
+{
   string filename;
   copy(filename);
   return 0;
