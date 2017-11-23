@@ -7,8 +7,8 @@
 #include <iostream>
 #include <fstream>
 using namespace std;
-#ifndef Copy.h
-#define Copy.h
+#ifndef stuff.txt
+#define stuff.txt
 
 /***********************************
 //Name: copy()
@@ -56,5 +56,5 @@ void copy(string filename)
     in.close();
 }
 
-#endif //Copy.h
+#endif //stuff.txt
 
