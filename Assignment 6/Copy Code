@@ -19,7 +19,7 @@
 /****************************************
 // Label             Task                                            Goto
 // 01                [in = filename]                                 02
-// 02                [out = Copy.h]                               03
+// 02                [out = stuff.txt]                               03
 // 03                <getline(in,str) != eof()>                      04,06 
 // 04                [out.print(str + "\n")]                          03
 // 05                [out.close()]                                   06
@@ -47,7 +47,7 @@ void copy(string filename)
 {
     string str;
     ifstream in(filename.c_str());
-    ofstream out("Copy.h");
+    ofstream out("stuff.txt");
     while(getline(in, str))
     {
         out << str << "\n";
