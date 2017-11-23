@@ -19,7 +19,7 @@
 /****************************************
 // Label             Task                                            Goto
 // 01                [in = filename]                                 02
-// 02                [out = stuff.txt]                               03
+// 02                [out = Copy.h]                               03
 // 03                <getline(in,str) != eof()>                      04,06 
 // 04                [out.print(str + "\n")]                          03
 // 05                [out.close()]                                   06
