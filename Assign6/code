@@ -29,8 +29,8 @@ using namespace std;
 // 12                [ifile.close()]                                 12
 // 13                (exit)
 void copy(string filename){
-  cout<<"Enter filename:";
-  cin>> filename;
+  cout << "Enter filename:";
+  cin >> filename;
 
   ifstream ifile;
     ifile.open("mainfile.txt");
@@ -39,7 +39,8 @@ void copy(string filename){
     ofile.open(filename);
   char ch;
 
-  while (!ifile.eof()){
+  while (!ifile.eof())
+  {
     ifile.get(ch);
       ofile<<ch;
     }
