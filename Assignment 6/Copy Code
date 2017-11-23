@@ -4,6 +4,12 @@
 //Version: Assignment 6
 *********************/
 
+#include <iostream>
+#include <fstream>
+using namespace std;
+#ifndef Copy.h
+#define Copy.h
+
 /***********************************
 //Name: copy()
 //Parameter(s): string filename;
@@ -26,12 +32,6 @@
 // 06                [in.close()]                                    07
 // 08                (exit)
 ***************************************/
-
-#include <iostream>
-#include <fstream>
-using namespace std;
-#ifndef Copy.h
-#define Copy.h
 
 void copy(string filename);
 int main()
