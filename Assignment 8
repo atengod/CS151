@@ -1,1 +1,70 @@
-#empty
+/*********************
+//Name: Michael Olorode
+//Creation: 12/04/17
+//Version: Assignment 8
+*********************/
+
+
+/***********************************
+//Name: copy()
+//Parameter(s): string filename;
+//Return: nothing
+//Description: 
+*******************************************/
+
+
+#include <iostream>
+using namespace std;
+void ComboWithout();
+void PrintCombo(char arr[], char data[], int start, int end,
+                     int index, int r);
+void ComboWithout()
+{
+    // A temporary array to store all combination one by one
+    char arr[] = {'A','B','C','D','E','F','G','H','I','J'};
+    int r = 3;
+    int n = sizeof(arr)/sizeof(arr[0]);
+    int factorial , factorial1;
+   
+    for(int i = 1; i <=n; ++i)
+    {
+        factorial *= i;
+    }
+   
+    for(int i = 1; i <=(n-r); ++i)
+    {
+        factorial1 *= i;
+   }
+  
+    char data[factorial/factorial1];
+ 
+    // Print all combination using temprary array 'data[]'
+    PrintCombo(arr, data, 0, n-1, 0, r);
+}
+ 
+void PrintCombo(char arr[], char data[], int start, int end,
+                     int index, int r)
+{
+    // Current combination is ready to be printed, print it
+    if (index == r)
+    {
+        for (int j=0; j<r; j++)
+            cout << data[j];
+            cout << endl;
+        return;
+    }
+ 
+    // replace index with all possible elements. The condition
+    // "end-i+1 >= r-index" makes sure that including one element
+    // at index will make a combination with remaining elements
+    // at remaining positions
+    for (int i=start; i<=end && end-i+1 >= r-index; i++)
+    {
+        data[index] = arr[i];
+        PrintCombo(arr, data, i+1, end, index+1, r);
+    }
+}
+
+int main() {
+ ComboWithout();
+}
