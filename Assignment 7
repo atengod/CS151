@@ -6,8 +6,8 @@
 
 /***********************************
 //Name: sort()
-//Parameter(s): string filename;
-//Return: nothing
+//Parameter(s): ;
+//Return:
 //Description: Sorts data in descending order.
 ***************/
 
