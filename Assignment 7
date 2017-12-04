@@ -5,9 +5,9 @@
 *********************/
 
 /***********************************
-//Name: sort()
-//Parameter(s): ;
-//Return:
+//Name: Sort()
+//Parameter(s): data:int[] , size:int;
+//Return: void
 //Description: Sorts data in descending order.
 ***************/
 
