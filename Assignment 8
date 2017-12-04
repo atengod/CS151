@@ -9,7 +9,8 @@
 //Name: ComboWithout()
 //Parameter(s): nothing;
 //Return: void
-//Description: 
+//Description: Displays all possible three letter arrangement such that order does not matter and arrangements cannot have
+repeating letters with ten arrangements on each line separated by spaces.
 *******************************************/
 
 
