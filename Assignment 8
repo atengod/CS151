@@ -11,8 +11,12 @@
 //Return: void
 //Description: Displays all possible three letter arrangement such that order does not matter and arrangements cannot have
 repeating letters with ten arrangements on each line separated by spaces.
-*******************************************/
-
+// Label             Task                                            Goto
+// 01                /print(Enter filename)/                          02
+// 02                /cin = filename/                                03
+// 03                [copy(filename)]                                04
+// 04                (exit)
+***************************************/
 
 #include <iostream>
 using namespace std;
