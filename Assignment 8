@@ -7,8 +7,8 @@
 
 /***********************************
 //Name: ComboWithout()
-//Parameter(s):;
-//Return: 
+//Parameter(s): nothing;
+//Return: void
 //Description: 
 *******************************************/
 
