@@ -12,21 +12,8 @@
 //Description: Displays all possible three letter arrangement such that order does not matter and arrangements cannot have
 repeating letters with ten arrangements on each line separated by spaces.
 // Label             Task                                            Goto
-// 01                /print(Enter filename)/                          02
-// 02                /cin = filename/                                03
-// 03                [copy(filename)]                                04
-// 04                (exit)
-***************************************/
-/****************************************
-// Label             Task                                            Goto
-// 01                [in = filename]                                 02
-// 02                [out = stuff.txt]                               03
-// 03                <getline(in,str) != eof()>                      04,06 
-// 04                [out.print(str + "\n")]                          03
-// 05                [out.close()]                                   06
-// 06                [in.close()]                                    07
-// 08                (exit)
-***************************************/
+**************************************/
+
 
 #include <iostream>
 using namespace std;
