@@ -1,5 +1,5 @@
 //Team: <Creators>
-//Author: <Michael Olorode>
+//Author: <Michael Olorode, Kehinde Ogungbemi>
 //Creation: <11/9/17>
 #ifndef BOARD_H
 #define BOARD_H
