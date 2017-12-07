@@ -19,6 +19,16 @@ using namespace std;
 
 /****************************************
 // Label             Task                                            Goto
+//01                 (start: i)                                        02
+//02                [i = 0;i < size; i++]                              03
+//03                 data[i]                                           04
+//04                  (exit)
+
+
+
+/cin/
+ [g=h*i;]
+ <loop>
 ***************************************/
  
 void Sort(int data[], int size)
