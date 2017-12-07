@@ -9,28 +9,27 @@
 //Parameter(s): data:int[] , size:int;
 //Return: void
 //Description: Sorts data in descending order.
-// Label             Task                                            Goto
-***************************************/
+*****************************************/
+
+/***********************************************
+// Label             Task                                  Goto
+//01            int data[], int size)                        02
+//02         <for(int i = 0; i < size-1; i++)>             03
+//03             int max_idx = i;                          04
+//04        <for(int j = i+1; j < size; j++)>              05
+//05          <if(data[j] > data[max_idx])>                06
+//06            max_idx = j;                               07
+           
+//        int t = data[max_idx];
+//        data[max_idx] = data[i];
+//               [data[i] = t]
+**************************************************/
 
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
 using namespace std;
 
-/****************************************
-// Label             Task                                            Goto
-//01                 (start: i)                                        02
-//02                [i = 0;i < size; i++]                              03
-//03                 data[i]                                           04
-//04                  (exit)
-
-
-
-/cin/
- [g=h*i;]
- <loop>
-***************************************/
- 
 void Sort(int data[], int size)
 {
     for (int i = 0; i < size-1; i++)
