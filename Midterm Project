@@ -36,7 +36,7 @@ double res = a / b;
 cout << "Division of " << a << " and " << b << " is : "<< res << endl;
 }
 
-if(b==0)
+if(b == 0)
 {
 cout << "Sorry Can not divide by zero.." <<endl;
 }
