@@ -15,51 +15,43 @@ repeating letters with ten arrangements on each line separated by spaces.
 **************************************/
 
 
-#include <iostream>
-using namespace std;
-
-void ComboWithout();
-void PrintCombo(char arr[], char data[], int start, int end, int index, int r);
-void ComboWithout()
+#include <stdio.h>
+#include <string.h>
+void swap (char *x, char *y)
 {
-    char arr[] = {'A','B','C','D','E','F','G','H','I','J'};
-    int r = 3;
-    int n = sizeof(arr) / sizeof(arr[0]);
-    int factorial , factorial1;
-   
-    for(int i = 1; i <= n; ++i)
-    {
-        factorial *= i;
-    }
-   
-    for(int i = 1; i <= (n-r); ++i)
-    {
-        factorial1 *= i;
-   }
+  char temp;
+  temp = *x;
+  *x  = *y;
+  *y = temp;
+}
+
+void permute(char *a, int i, int n)
+{
+  int j;
+  if(i == n)
+  printf("%s\n", a);
   
-    char data[factorial / factorial1];
- 
-    PrintCombo(arr, data, 0, n-1, 0, r);
-}
- 
-void PrintCombo(char arr[], char data[], int start, int end, int index, int r)
-{
-    if (index == r)
+  else
+  {
+    for(j = i; j <= n; j++)
     {
-        for (int j = 0; j < r; j++)
-            cout << data[j];
-            cout << endl;
-        return;
+      swap((a + i), (a + j));
+      permute(a, i + 1, n);
+      swap((a + i), (a + j));
     }
- 
-    for (int i = start; i <= end && end-i+1 >= r-index; i++)
-    {
-        data[index] = arr[i];
-        PrintCombo(arr, data, i+1, end, index+1, r);
-    }
+  }
+  
 }
 
-int main() 
+int main()
 {
- ComboWithout();
+  char a[20];
+  int n;
+  printf("Enter a string: ");
+  scanf("%s", a);
+  n = strlen(a);
+  printf("Permutations:\n");
+  permute(a, 0, n - 1);
+  getchar();
+  return 0;
 }
